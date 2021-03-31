@@ -46,7 +46,10 @@ let uknownExample: unknown = true;
 // any type 
 let anyExample: any = 24;
 
-
+// void type (specifies the type of the function that returns nothing)
+const showConsoleLog = (): void => {
+    console.log("Text");
+}
 
 
 
