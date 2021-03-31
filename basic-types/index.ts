@@ -26,6 +26,23 @@ const allArray: Array<boolean | number> = [false, 34, false, 45];
 // tuple 
 const tuple: [number, string] = [24, "Adam"];
 
+// enum
+enum UserTypes {
+    ADMIN,
+    MODERATOR,
+    MODERATOR_NEWS,
+    USER,
+    BANNED
+}
+
+let user: UserTypes = UserTypes.USER;
+const adminKey = UserTypes[0];
+
+enum stringExample {
+    EVENT_CLICK = 'click',
+    EVENT_CHANGE = 'change',
+}
+
 
 
 
