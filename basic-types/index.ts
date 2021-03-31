@@ -51,5 +51,9 @@ const showConsoleLog = (): void => {
     console.log("Text");
 }
 
+// never type (this type specifies a function that returns, for example, error)
+const throwError = (): never => {
+    throw new Error();
+}
 
 
