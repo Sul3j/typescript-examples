@@ -7,9 +7,19 @@ interface User {
     names: Names;
 }
 
-interface Player {
+// interface Player {
+//     nick: string;
+//     names: Names;
+// }
+
+type PlayerNames = {
+    firstName: string, 
+    lastName: string,
+}
+
+type Player = {
     nick: string;
-    names: Names;
+    names: PlayerNames;
 }
 
 // const user = {} as { age: number | string, names?: { firstName: string, lastName: string } };
