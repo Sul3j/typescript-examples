@@ -1,3 +1,11 @@
+interface User {
+    age: number;
+    names: { 
+        firstName: string; 
+        lastName: string;
+    }
+}
+
 // const user = {} as { age: number | string, names?: { firstName: string, lastName: string } };
 
 // user.age = 20;
@@ -5,7 +13,7 @@
 // user.names.firstName = 'Szymon';
 // user.names.lastName = 'Sulejczak';
 
-const user = {
+const user: User = {
     age: 20, 
     names: {
         firstName: 'Szymon',
