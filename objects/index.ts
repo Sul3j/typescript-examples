@@ -4,12 +4,12 @@ interface Names {
 }
 interface User {
     age: number;
-    names?: Names;
+    names: Names;
 }
 
 interface Player {
     nick: string;
-    names?: Names;
+    names: Names;
 }
 
 // const user = {} as { age: number | string, names?: { firstName: string, lastName: string } };
@@ -24,8 +24,8 @@ const user: User = {
     names: {
         firstName: 'Szymon',
         lastName: 'Sulejczak',
-    }
-}
+    },
+};
 
 const player: Player = {
     nick: 'sulej',
@@ -35,6 +35,12 @@ const player: Player = {
     },
 };
 
+function showFirstnameAndLastname(person: {names: { firstName: string; lastName: string }}) {
+    const { firstName, lastName } = person.names;
+
+    return `${firstName} ${lastName}`;
+};
+
 function showUserInfo(user: User) {
     const { age, names: { firstName, lastName } = {firstName: 'Unknown', lastName: 'user'}} = user;
 
@@ -42,3 +48,5 @@ function showUserInfo(user: User) {
 }
 
 console.log(showUserInfo(user));
+console.log(showFirstnameAndLastname(user));
+console.log(showFirstnameAndLastname(player));
