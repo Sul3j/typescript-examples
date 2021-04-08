@@ -45,6 +45,17 @@ const player: Player = {
     },
 };
 
+const peopleList: (User | Player)[] = [];
+
+peopleList.push(player);
+peopleList.push(user);
+
+peopleList.forEach(person => {
+    if ('age' in person) {
+        console.log(showUserInfo(person));
+    }
+})
+
 function showFirstnameAndLastname(person: {names: { firstName: string; lastName: string }}) {
     const { firstName, lastName } = person.names;
 
