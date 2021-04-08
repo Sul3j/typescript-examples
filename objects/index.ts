@@ -27,7 +27,15 @@ const user: User = {
     }
 }
 
-function showUserInfo(user: { age: number | string, names?: { firstName: string, lastName: string}}) {
+const player: Player = {
+    nick: 'sulej',
+    names: { 
+        firstName: 'Szymon',
+        lastName: 'Sulejczak',
+    },
+};
+
+function showUserInfo(user: User) {
     const { age, names: { firstName, lastName } = {firstName: 'Unknown', lastName: 'user'}} = user;
 
     return `${firstName} ${lastName} ma ${age} lat`;
