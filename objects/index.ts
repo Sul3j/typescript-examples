@@ -1,9 +1,15 @@
+interface Names {
+    firstName: string;
+    lastName: string;
+}
 interface User {
     age: number;
-    names: { 
-        firstName: string; 
-        lastName: string;
-    }
+    names?: Names;
+}
+
+interface Player {
+    nick: string;
+    names?: Names;
 }
 
 // const user = {} as { age: number | string, names?: { firstName: string, lastName: string } };
