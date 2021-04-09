@@ -52,3 +52,17 @@ const newFrontend: Required<Emplyee> = {
 }
 
 newWorker(newFrontend);
+
+const test = {
+    x: 1
+} as const;
+
+const alek: Readonly<Emplyee> = {
+    id: 23,
+    firstName: 'Aleksander',
+    lastName: 'Sulejczak',
+    jobPosition: 'backend',
+};
+
+
+
