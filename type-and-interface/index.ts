@@ -15,9 +15,20 @@ type BiggerType = {
 
 type SmallerType = {
     commonProperty: string;
-    anotherOneProperty: number;
+    // anotherOneProperty: number;
 }
 
 function showProperty(someObject: SmallerType) {
     return someObject.commonProperty;
 }
+
+const bigger: SmallerType = {
+    commonProperty: 'text',
+    // additionalProperty: 'test',
+}
+
+showProperty({commonProperty: 'x'});
+
+type SomeFunction = (someObject: SmallerType) => string;
+
+let func: SomeFunction = showProperty;
