@@ -64,5 +64,13 @@ const alek: Readonly<Emplyee> = {
     jobPosition: 'backend',
 };
 
+type NamesKey = 'szymon' | 'joanna' | 'cyprian';
 
+type MyFamilyType = Record<NamesKey, Partial<Person>>;
+
+const myFamily: MyFamilyType = {
+    szymon: { id: 20, firstName: 'Szymon', lastName: 'Sulejczak' },
+    joanna: {},
+    cyprian: {},
+}
 
