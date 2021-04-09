@@ -85,3 +85,9 @@ type PersonSecond = {
 
  function updateUserFistName(id: number, personToUpdate: Pick<PersonSecond, 'firstName' | 'lastName'>) {}
 
+ // Omit
+
+ function updatePersonSecond(id: number, personToUpdate: Omit<PersonSecond, 'id'>) {}
+
+
+
