@@ -74,3 +74,14 @@ const myFamily: MyFamilyType = {
     cyprian: {},
 }
 
+// Pick
+
+type PersonSecond = {
+    age: number;
+    firstName: string;
+    id: number;
+    lastName: string;
+};
+
+ function updateUserFistName(id: number, personToUpdate: Pick<PersonSecond, 'firstName' | 'lastName'>) {}
+
