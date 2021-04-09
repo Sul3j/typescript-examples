@@ -6,7 +6,7 @@ let myCommentType: CommentsTypes = 'Public';
 
 // myUserType = 'User';
 
-type AccessMode = 1 | 2 | 3 | 4 | 5;
+type PointXPsition = 1 | 2 | 3 | 4 | 5;
 
 type BiggerType = {
     commonProperty: string;
@@ -22,10 +22,15 @@ function showProperty(someObject: SmallerType) {
     return someObject.commonProperty;
 }
 
-// const bigger: SmallerType = {
-//     commonProperty: 'text',
-//     // additionalProperty: 'test',
-// }
+const exampleObject = {
+    a: '1',
+    b: 0,
+} as const;
+
+const bigger: SmallerType = {
+    commonProperty: 'text',
+    anotherOneProperty: 3,
+}
 
 // showProperty({commonProperty: 'x'});
 
@@ -46,8 +51,30 @@ const objectTest: BiggerType & SmallerType = {
 type NewType = {
     bigger: BiggerType,
     smaller: SmallerType,
+    point?: Point,
 }
 
 function x(y: NewType) {
     y.bigger.additionalProperty;
 }
+
+interface Point {
+    readonly x: PointXPsition;
+    readonly y: number;
+}
+
+interface Description {
+    description: string;
+}
+
+interface PointWithDescription extends Point, Description {
+    z?: number;
+}
+
+const point: PointWithDescription = {
+    x: 2,
+    y: 0,
+    description: 't',
+}
+
+point.description = 'text';
