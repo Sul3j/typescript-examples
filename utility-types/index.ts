@@ -90,4 +90,11 @@ type PersonSecond = {
  function updatePersonSecond(id: number, personToUpdate: Omit<PersonSecond, 'id'>) {}
 
 
+//Exclude
+
+type TechnologiesInOurCompany = 'React' | 'Vue' | 'Nest.js' | 'PHP' | '.Net' | 'Cypress' | 'Angular';
+type BackendTechnologies = 'PHP' | 'Nest.js' | '.Net';
+
+type FrontendTechnologiesInOutCompany = Exclude<TechnologiesInOurCompany, BackendTechnologies>;
+const jsDevOnFrontend: FrontendTechnologiesInOutCompany = 'Angular';
 
