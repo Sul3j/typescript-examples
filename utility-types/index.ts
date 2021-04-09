@@ -98,3 +98,8 @@ type BackendTechnologies = 'PHP' | 'Nest.js' | '.Net';
 type FrontendTechnologiesInOutCompany = Exclude<TechnologiesInOurCompany, BackendTechnologies>;
 const jsDevOnFrontend: FrontendTechnologiesInOutCompany = 'Angular';
 
+// Extact
+
+type SulejDev = 'Angular' | 'JavaScript' | 'TypeScript' | 'C++';
+
+const newFrontendDev: Extract<TechnologiesInOurCompany, SulejDev> = 'Angular';
