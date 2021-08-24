@@ -124,3 +124,19 @@ const parametersForOurFunction: SomeFunction = [4, 15, 'Aleksander', 'Kowalski']
 
 someFunction(...parametersForOurFunction);
 
+// ConstructorParameters
+
+class User {
+    constructor(
+        public age: number,
+        public id: number,
+        public firstname: string,
+        public lastname: string
+    ) {}
+}
+
+type UserClassParameters = ConstructorParameters<typeof User>;
+
+const newUserParams: UserClassParameters = [4, 16, 'Wiktor', 'Kowalski'];
+
+new User(...newUserParams);
