@@ -140,3 +140,17 @@ type UserClassParameters = ConstructorParameters<typeof User>;
 const newUserParams: UserClassParameters = [4, 16, 'Wiktor', 'Kowalski'];
 
 new User(...newUserParams);
+
+//ReturnType
+
+type PersonData = {
+    age: number,
+    firstname: string,
+    lastname: string,
+}
+
+function getFirstName(person: PersonData){
+    return person.firstname;
+}
+
+const firstname: ReturnType<typeof getFirstName> = 'string';
