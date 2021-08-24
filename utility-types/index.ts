@@ -112,5 +112,15 @@ type NonNullableUserId = NonNullable<UserId>;
 
 const userId: NonNullableUserId = 5;
 
+//Parameters
 
+function someFunction(age: number, id: number, firstname: string, lastname: string) {
+    console.log(age, id, firstname, lastname);
+}
+
+type SomeFunction = Parameters<typeof someFunction>;
+
+const parametersForOurFunction: SomeFunction = [4, 15, 'Aleksander', 'Kowalski'];
+
+someFunction(...parametersForOurFunction);
 
