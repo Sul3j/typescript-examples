@@ -20,7 +20,7 @@ const booleanArray: Array<boolean> = [false, true, false];
 const numberArray: Array<number> = [1, 2, 3];
 
 //union type array (allows you to enter several types of data into an array)
-const peopleArray: Array<string | number> = ["Adam", 24, "Kasia", 45];
+const peopleArray: Array<string | number > = ["Adam", 24, "Kasia", 45];
 const allArray: Array<boolean | number> = [false, 34, false, 45];
 
 // tuple (an array with a specified number of elements and types)
@@ -55,5 +55,7 @@ const showConsoleLog = (): void => {
 const throwError = (): never => {
     throw new Error();
 }
+
+
 
 

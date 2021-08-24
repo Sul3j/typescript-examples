@@ -23,8 +23,8 @@ const SECOND_NUMBER_ID: string = 'second-number';
 const addButton = document.getElementById(ADDITION_BUTTON_ID);
 
 addButton?.addEventListener('click', () => {
-    // const firstNumber = document.querySelector(`#${FIRST_NUMBER_ID}`) as HTMLInputElement | null;
-    // const secondNumber = document.getElementById(SECOND_NUMBER_ID) as HTMLInputElement | null;
+    //const firstNumber = document.querySelector(`#${FIRST_NUMBER_ID}`) as HTMLInputElement | null;
+    //const secondNumber = document.getElementById(SECOND_NUMBER_ID) as HTMLInputElement | null;
     const resultPlaceholder = document.getElementById(RESULT_PLACEHOLDER_ID) as HTMLSpanElement | null;
     const [inputFirst, inputSecond] = Array.from(document.querySelectorAll<HTMLInputElement>(NUMBER_CLASS));
     if(!inputFirst || !inputSecond || !resultPlaceholder) {
@@ -38,3 +38,6 @@ addButton?.addEventListener('click', () => {
 });
 
 console.log('hello');
+
+
+

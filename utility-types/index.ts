@@ -103,3 +103,14 @@ const jsDevOnFrontend: FrontendTechnologiesInOutCompany = 'Angular';
 type SulejDev = 'Angular' | 'JavaScript' | 'TypeScript' | 'C++';
 
 const newFrontendDev: Extract<TechnologiesInOurCompany, SulejDev> = 'Angular';
+
+//NonNullable
+
+type UserId = number | string | null | undefined;
+
+type NonNullableUserId = NonNullable<UserId>;
+
+const userId: NonNullableUserId = 5;
+
+
+

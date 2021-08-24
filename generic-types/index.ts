@@ -124,3 +124,4 @@ qaDatabase.addDev({
     pesel: 123456789,
     typeOfTesting: 'e2e',
 })
+
