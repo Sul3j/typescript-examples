@@ -9,20 +9,30 @@
 // const point = new PointXY();
 
 class Person {
-    // public age: number;
+    public _age: number;
     // private firstname: string;
     // private lastname: string;
-
     constructor(
-        public age: number,
+        age: number,
         private firstname: string, 
-        protected lastname: string){}
+        protected lastname: string){
+        this._age = age;
+    }
 
-    changeFirstname(newName: string) {
+    get age() {
+        return this._age;
+    }
+
+    set age(newAge) {
+        if (newAge < 0) {
+            this._age = 0;
+        }
+    }
+    public changeFirstname(newName: string) {
         this.firstname = newName;
     }
 
-    greetings(){
+    private greetings(){
         console.log(`Hello! My name is ${this.firstname} ${this.lastname}`);
     }
 }
@@ -46,3 +56,33 @@ const employee = new Employee(31, 'Jan', 'Kowalski');
 
 user.age = 30;
 user.changeFirstname('Adam');
+
+// Klasy abstrakcyjne
+
+abstract class Human {
+    public abstract age: number;
+    protected abstract firstname: string;
+    public abstract lastname: string;
+
+    public abstract greetings(): void;
+    public abstract getAge(): number;
+}
+
+class Player extends Human {
+    constructor(
+        public age: number,
+        protected firstname: string,
+        public lastname: string,
+    ) {
+        super();
+    }
+
+    public greetings() {
+        console.log(`Hello! My name is ${this.firstname} ${this.lastname}`);
+    }
+
+    public getAge() {
+        return this.age;
+    }
+}
+
